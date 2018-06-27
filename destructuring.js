@@ -32,7 +32,8 @@ let {color, make, model, year} = carDetails
 */
 
 function greeting( obj ) {
-  //Code Here
+  //Code Here 
+  let {firstName, lastName, title} = obj
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -50,7 +51,10 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+function totalPopulation(obj){
+  let {utah, california, texas, arizona} = obj
+  return utah+california+texas+arizona
+}
 
 
 
@@ -64,10 +68,15 @@ function greeting( obj ) {
   Push these new variables to an array and return the array. 
 */
 
-//Code Here
+function ingredients(obj){
+  let {carb, fat, protein} = obj
 
-
-
+let arr = [];
+arr.push(carb)
+arr.push(fat)
+arr.push(protein)
+return arr
+}
 ////////// PROBLEM 5 //////////
 
 /*
@@ -82,7 +91,20 @@ function greeting( obj ) {
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
+function largeNumbers( {first, second, third} ) {
+  if(first>second){
+    if(second>third){
+      return third;
+    } else {
+      return second;
+    }
+  }else if (first>third){
+        
+      return third
+    } else {
+      return first
+    }
+  }
 
 
 
@@ -96,4 +118,16 @@ function greeting( obj ) {
 
 //Code Here
 
-
+function numberGroups({a, b, c}) {
+  if(a<b){
+    if(b<c){
+      return c
+    } else {
+      return b
+    }
+  } else if (a>b){
+    return c
+  } else {
+    return a
+  }
+}
